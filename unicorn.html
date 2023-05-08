@@ -10,43 +10,65 @@
 </head>
 
 <body>
-    <h1>UCボタン</h1>
-    <button type="button" id="tmrBtn" class="btn">完全勝利</button>
-    <p><br></p>
-    <button type="button" id="rtnBtn" class="btn">やめる</button>
-
-    <script type="text/javascript">
-        window.onload = function () {
-            let my_audio = new Audio("./UC.mp3");
-
-            //ボタンにクリックイベントを設定
-            document.getElementById("tmrBtn").onclick = function () {
-                my_audio.currentTime = 0;  //再生開始位置を先頭に戻す
-                my_audio.play();  //サウンドを再生
-            }
-
-            document.getElementById("rtnBtn").onclick = function () {
-                my_audio.pause();
-            }
-        }
-    </script>
-
-    <style>
-        .btn {
-            width: 80vw;
-            height: 30vh;
-            display: block;
-            margin: auto;
-            font-size: 200%;
-        }
-        h1 {
-            text-align: center;
-            font-size: 400%;
-        }
-    </style>
-
-
+    <div class="back">
+        <div class="toumei">
+            <h1>UCボタン</h1>
+            <button type="button" id="tmrBtn" class="btn">流れ変わったな</button>
+            <p><br></p>
+            <button type="button" id="vBtn" class="btn">完全勝利</button>
+            <p><br></p>
+            <button type="button" id="rtnBtn" class="btn">やめる</button>
+        </div>
+    </div>
 </body>
+
+<script type="text/javascript">
+    window.onload = function () {
+        let my_audio = new Audio();
+
+        //ボタンにクリックイベントを設定
+        document.getElementById("tmrBtn").onclick = function () {
+            my_audio.src = "./UC.mp3";
+            my_audio.play();  //サウンドを再生
+        }
+
+        document.getElementById("vBtn").onclick = function () {
+            my_audio.src = './UC.mp3#t=41';
+            my_audio.play();  //サウンドを再生
+        }
+
+        document.getElementById("rtnBtn").onclick = function () {
+            my_audio.pause();
+        }
+    }
+</script>
+
+<style>
+    .btn {
+        width: 80vw;
+        height: 20vh;
+        display: block;
+        margin: auto;
+        font-size: 200%;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 400%;
+    }
+
+    .back {
+        width: 100%;
+        height: 100%;
+        background-image: url('./background.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .toumei{
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+</style>
 
 
 </html>
