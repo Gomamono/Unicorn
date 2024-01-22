@@ -1,14 +1,22 @@
 {
-    "name": "PWA Unicorn",
-    "short_name": "Unicorn",
-    "icons": [{
-          "src": "./../icon.png",
-          "sizes": "200x200",
-          "type": "image/png"
-        }],
-    "start_url": "./../../index.html",
-    "display": "standalone",
-    "background_color": "#3E4EB8",
-    "theme_color": "#2F3BA2"
-  }
-  
+  "name": "PWA Unicorn",
+  "short_name": "Unicorn",
+  "icons": [
+    {
+      "src": "./../icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./../icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./../../index.html",
+  "display": "standalone",
+  "background_color": "#696969",
+  "theme_color": "#707070"
+}
